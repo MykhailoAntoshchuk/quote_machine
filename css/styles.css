@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'ArcadeClassic';
+  src: url("../fonts/ARCADECLASSIC.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+
+body{
+	background-color: rgb(134,123,122) !important;
+}
+
+.wrapper{
+	text-align: center;
+	
+}
+.machine-wrapper{
+	position:absolute;
+	top: 15%;
+	left: 20%;
+	right: 15%;
+	bottom: 15%
+	z-index: 100;
+}
+
+.machine {
+	position: relative;
+	display: inline-block;
+  	margin: auto;
+}
+
+.screen{
+	padding: 3%;
+	position: absolute;
+	top: 10%;
+	left: 41%;
+	height: 54%;
+	width: 53.5%;
+}
+
+quote{
+	display: block;
+	font-family: ArcadeClassic;
+	font-size: 1.3vw;
+	line-height: 1.5vw;
+	letter-spacing: .1vw;
+	word-spacing: .7vw;
+	text-align: left; 
+}
+
+#quote-author{
+	font-family: ArcadeClassic;
+	font-size: 1.3vw;
+	letter-spacing: .3vw;
+	word-spacing: .5vw;
+	text-align: right;
+}
+
+.next_quote_btn{
+	position: absolute;
+	top: 42%;
+	left: 4.5%;
+	height: 11%;
+	width: 11%;
+	padding: 0;
+	border: none;
+	outline: none;
+	background: url("../images/next_quote_btn.svg") no-repeat;
+	background-size: contain;
+	
+
+}
+.next_quote_btn:active{
+	background: url("../images/next_quote_btn_pressed.svg") no-repeat;
+	background-size: contain;
+	padding: 0;
+	border: none;
+}
+
+.tweet_btn{
+	position: absolute;
+	top: 55%;
+	left: 4.5%;
+	height: 11%;
+	width: 12%;
+	padding: 0;
+	border: none;
+	outline: none;
+	background: url("../images/tweet_btn.svg") no-repeat;
+	background-size: contain;
+}
+.tweet_btn:active{
+	background: url("../images/tweet_btn_pressed.svg") no-repeat;
+	background-size: contain;
+	padding: 0;
+	border: none;
+}
+
+#kitty{
+		position: absolute;
+		height: 20vw;
+	
+		
+}

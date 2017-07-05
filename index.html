@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+</head>
+
+</style>
+	<body>
+	<div class="wrapper">
+		<div class="machine-wrapper">
+			<div class="machine">
+				<img src="images/quote_machine.svg" alt="Quote machine" class="img-responsive">
+				<div class="screen">
+				<div class="loading-indicator"></div>
+					<quote></quote>
+					<p id="quote-author"></p>
+				</div>
+				<button class="next_quote_btn"></button>
+				<button class="tweet_btn">  <a href="https://twitter.com/intent/tweet" ></a></button>
+			</div>
+		</div>
+	</div>
+
+	<img src="images/kitty.svg" alt="Snicky kitty" class="img-responsive" id="kitty"></div>
+
+
+<script>
+
+
+
+  $(document).ready(function() {
+  	$(".next_quote_btn").on("click", function() {
+  	
+	  
+	 
+		var randomQuoteApi = "http://quotes.stormconsultancy.co.uk/random.json";
+		$.getJSON(randomQuoteApi, function(json) {
+			$("quote").text(json.quote);
+			$("#quote-author").text(json.author);
+	  	});
+  	});
+
+	$(".tweet_btn").on("click", function() {
+		var twitterBaseUrl = "https://twitter.com/intent/tweet";
+
+		
+		var url = twitterBaseUrl + "?hashtags=quotes&related=freecodecamp&text=" 
+					+ $("quote").text() + " " + $("#quote-author").text();
+		var win = window.open(url, '_blank');
+  		win.focus();
+  	});
+  });
+</script>
+
+</html>
